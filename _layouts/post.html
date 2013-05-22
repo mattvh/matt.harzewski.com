@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<div class="post">
+
+
+	{% if page.external-url %}
+		<a class="permalinkstar" rel="bookmark" title="Permanent link" href="{{ page.url }}">&#9733;</a>
+		<h2><a rel="bookmark" href="{{ page.external-url }}">{{ page.title }}</a></h2>
+	{% else %}
+		<h2><a rel="bookmark" href="{{ page.url }}">{{ page.title }}</a></h2>
+	{% endif %}
+
+	<div class="postdateline">
+		<span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span>
+	</div>
+
+
+	<div class="entry">
+		{{ content }}
+	</div>
+
+
+	{% if page.external-url == nil %}
+		<div class="shareit">
+			<span class="gplus"><div class="g-plusone" data-annotation="none" data-href="{{ page.url }}"></div></span>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ page.url }}" data-text="{{ page.title }}" data-size="large">Tweet</a>
+		</div>
+		<script>
+		  (function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+	{% endif %}
+
+
+	{% if page.comments != false %}
+		<div class="comments">
+
+			    <div id="disqus_thread"></div>
+			    <script>
+			        var disqus_shortname = 'mattharzewski';
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+			    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+	{% endif %}
+
+
+</div>

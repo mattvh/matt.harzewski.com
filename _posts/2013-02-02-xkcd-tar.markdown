@@ -1,0 +1,15 @@
+---
+author: redwall_hp
+comments: true
+date: 2013-02-02 07:45:07
+layout: post
+slug: xkcd-tar
+title: 'XKCD: Tar'
+wordpress_id: 271
+categories:
+- Misc
+post_format:
+- Link
+---
+
+[{% img /images/posts/xkcd-tar-700x224.png %}](http://xkcd.com/1168/)
