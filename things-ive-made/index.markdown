@@ -73,4 +73,7 @@ wordpress_id: 67
 ### GitHub Repos
 
 
-[github_repos user="redwallhp"]
+{% raw %}
+<script type="text/javascript" src="/assets/githubrepos.js"></script>
+<div class="github-user-repos-widget" data-user="redwallhp"></div>
+{% endraw %}
