@@ -24,8 +24,8 @@ layout: default
 
 	{% if page.external-url == nil %}
 		<div class="shareit">
-			<span class="gplus"><div class="g-plusone" data-annotation="none" data-href="{{ page.url }}"></div></span>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ page.url }}" data-text="{{ page.title }}" data-size="large">Tweet</a>
+			<span class="gplus"><div class="g-plusone" data-annotation="none" data-href="{{ site.url }}{{ post.url }}"></div></span>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ post.url }}" data-text="{{ page.title }}" data-size="large">Tweet</a>
 		</div>
 		<script>
 		  (function() {
