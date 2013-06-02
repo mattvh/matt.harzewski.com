@@ -1,6 +1,6 @@
 {% if post.external-url %}
-	<h3><a href="{{ post.external-url }}">{{ post.title }}</a> </h3>
+	<h3><a href="{{ post.external-url }}">{{ post.title | markdownify }}</a> </h3>
 {% else %}
-	<h3><a rel="bookmark" href="{{ root_url }}{{ post.url }}">{{ post.title }}</a></h3>
+	<h3><a rel="bookmark" href="{{ root_url }}{{ post.url }}">{{ post.title | markdownify }}</a></h3>
 {% endif %}
 <time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate><a href="{{ root_url }}{{ post.url }}">{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</a></time>
