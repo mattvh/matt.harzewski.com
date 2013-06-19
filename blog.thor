@@ -36,4 +36,13 @@ class Blog < Thor
 
 
 
+	desc "up", "Start a server and open the site in your browser"
+	def up
+		system("jekyll serve -w &")
+		system("sleep 3")
+		system("open http://localhost:4000")
+	end
+
+
+
 end
