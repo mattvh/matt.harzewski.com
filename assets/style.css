@@ -307,18 +307,48 @@ input.searchinput {
 	/*border-bottom: 1px solid #e5e5e5;*/
 }
 
-#sidebartwitter div.twtr-ft, #sidebartwitter div.twtr-hd {
-	display: none;
-}
-
-#sidebartwitter div.twtr-tweet-text p a.twtr-user {
-	display: none;
-}
-
 #sidebartwitter .followbutton {
 	display: block;
 	width: 135px;
 	margin: 15px auto 0 auto;
+}
+
+#sbtweets {
+	margin: 0 auto;
+	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif;
+	font-size: 0.75em;
+	line-height: 1.4;
+	color: #666666;
+}
+
+#sbtweets ul {
+	margin: 0;
+	padding: 0;
+}
+
+#sbtweets li {
+	list-style: none;
+	padding-bottom: 3px;
+}
+
+#sbtweets .user a, #sbtweets .user a:hover {
+	text-decoration: none;
+	color: #555555;
+    font-weight: bold;
+}
+
+#sbtweets .user img {
+	width: 24px;
+	height: 24px;
+}
+
+#sbtweets .user span:first-of-type {
+	display: none;
+}
+
+#sbtweets .user span {
+	position: relative;
+	top: -7px;
 }
 
 #sidebarad {
