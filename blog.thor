@@ -12,7 +12,8 @@ class Blog < Thor
 
 		title = title.join(" ")
 		time = Time.now
-		filename = "_posts/#{time.strftime('%Y-%m-%d')}-#{title.to_url}.markdown"
+		slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+		filename = "_posts/#{time.strftime('%Y-%m-%d')}-#{slug}.markdown"
 
 		if File.exist?(filename)
 			abort("#{filename} already exists!")
