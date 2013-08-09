@@ -17,4 +17,4 @@ To illustrate the effect, here is [an animated image](http://matt.harzewski.com/
 
 {% video /images/videos/harzewski_effect.mp4 /images/videos/harzewski_effect.webm /images/videos/harzewski_effect.ogg 640 480 /images/videos/harzewski_effect.png %}
 
-The Harzewski Effect seems to have vanished from Wikipedia—apparently some of the editors decided it was a "neologism" and removed the article—but you can still see the term referenced on some websites, such as the one for [this media production company](http://www.fullcirclestudios2.com/EntAudio.htm).
+The Harzewski Effect seems to have vanished from Wikipedia--apparently some of the editors decided it was a "neologism" and removed the article--but you can still see the term referenced on some websites, such as the one for [this media production company](http://www.fullcirclestudios2.com/EntAudio.htm).
