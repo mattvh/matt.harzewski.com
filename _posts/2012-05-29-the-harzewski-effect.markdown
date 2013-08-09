@@ -4,7 +4,7 @@ comments: true
 date: 2012-05-29 16:07:39
 layout: post
 slug: the-harzewski-effect
-title: The Harzewski Effect
+title: "The Harzewski Effect"
 wordpress_id: 191
 categories:
 - Misc
