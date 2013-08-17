@@ -13,7 +13,8 @@ require "RMagick"
 module Jekyll
 
 
-	class GalleryTag < Liquid::Block
+
+	 class GalleryTag < Liquid::Block
 
 
 	 	def initialize(tag_name, markup, tokens)
@@ -73,11 +74,11 @@ module Jekyll
 		end
 
 
-	end
+	 end
 
 
 
-	class GalleryThumbnail
+	 class GalleryThumbnail
 
 
 	 	def initialize(image_filename, config)
@@ -97,48 +98,30 @@ module Jekyll
 	 	end
 
 
-	end
-
-
-	# This part is copied from https://github.com/kinnetica/jekyll-plugins
-	# Without it, generation does fail. --dmytro
-	# Recover from strange exception when starting server without --auto
-	class GalleryFile < StaticFile
-		def write(dest)
-			begin
-				super(dest)
-			rescue
-			end
-			true
-		end
-	end
+	 end
 
 
 
-	class ThumbGenerator < Generator
+	 class ThumbGenerator < Generator
 
 
 	 	def generate(site)
 
 	 		@config = site.config['gallerytag']
-	 		@gallery_dir  = File.expand_path(@config['dir'])
-	 		@gallery_dest = File.expand_path(File.join(site.dest, @config['dir']))
+	 		@gallery_dir = File.expand_path(@config['dir'])
 
-	 		thumbify(files_to_resize(site))
+	 		thumbify(files_to_resize)
 
 	 	end
 
 
-	 	def files_to_resize(site)
+	 	def files_to_resize
 
 	 		to_resize = []
 
-	 		Dir.glob(File.join(@gallery_dir, "**", "*.{png,jpg,jpeg,gif}")).each do |file|
+	 		Dir.glob(File.join(@gallery_dir, "*.{png,jpg,jpeg,gif}")).each do |file|
 	 			if !File.basename(file).include? "-thumb"
-	 				name = File.basename(file).sub(File.extname(file), "-thumb#{File.extname(file)}")
-	 				thumbname = File.join(@gallery_dest, name)
-	                # Keep the thumb files from being cleaned by Jekyll
-	                site.static_files << Jekyll::GalleryFile.new(site, site.dest, @config['dir'], name )
+	 				thumbname = File.join(@gallery_dir, File.basename(file).sub(File.extname(file), "-thumb#{File.extname(file)}"))
 	 				if !File.exists?(thumbname)
 	 					to_resize.push({ "file" => file, "thumbname" => thumbname })
 	 				end
@@ -162,7 +145,7 @@ module Jekyll
 	 	end
 
 
-	end
+	 end
 
 
 
