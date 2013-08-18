@@ -20,11 +20,11 @@ Unfortunately, the circuit tends to glitch and freeze up after awhile, and the l
 If you log on to the server (`s.nerd.nu`), you'll find it along the brown road.
 
 {% gallery mclighthouse %}
-mclighthouse-blinkon.jpg
-mclighthouse-blinkoff.jpg
-mclighthouse-far.jpg
-mclighthouse-closeup.jpg
-mclighthouse-5clock.jpg
+mclighthouse/mclighthouse-blinkon.jpg
+mclighthouse/mclighthouse-blinkoff.jpg
+mclighthouse/mclighthouse-far.jpg
+mclighthouse/mclighthouse-closeup.jpg
+mclighthouse/mclighthouse-5clock.jpg
 {% endgallery %}
 
 Update: You can get a closer look at the (since improved) circuit powering the lamp [here](http://matt.harzewski.com/2012/11/10/compact-redstone-5-clock-with-onoff-switch/).
