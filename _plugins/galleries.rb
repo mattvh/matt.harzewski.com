@@ -6,6 +6,7 @@
 # Author: Matt Harzewski
 # Copyright: Copyright 2013 Matt Harzewski
 # License: GPLv2 or later
+# Version: 1.1.0
 
 
 require "RMagick"
