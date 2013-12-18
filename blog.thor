@@ -7,7 +7,7 @@ class Blog < Thor
 
 	desc "post", "Create a new post"
 	method_option :link, :default => nil
-	method_option :editor, :default => "vim"
+	method_option :editor, :default => "/usr/local/bin/vim"
 	def post(*title)
 
 		title = title.join(" ")
