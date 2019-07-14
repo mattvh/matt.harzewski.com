@@ -75,5 +75,5 @@ wordpress_id: 67
 
 {% raw %}
 <script type="text/javascript" src="/assets/githubrepos.js"></script>
-<div class="github-user-repos-widget" data-user="redwallhp"></div>
+<div class="github-user-repos-widget" data-user="mattvh"></div>
 {% endraw %}
