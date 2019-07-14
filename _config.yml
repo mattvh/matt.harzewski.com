@@ -4,8 +4,10 @@ description: Something witty would go here
 
 permalink: /:year/:month/:day/:title/
 
+plugins: [jekyll-paginate]
+
 paginate: 10
-pygments: true
+highlighter: true
 markdown: rdiscount
 rdiscount:
     extensions: ['smart']
