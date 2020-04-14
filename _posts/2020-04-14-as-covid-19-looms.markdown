@@ -16,12 +16,6 @@ It's easy to get caught up in worries about the quality of education [inevitably
 
 One day later, I have to go to my job in Retail Land, where I'm floored by the stark contrast in attitudes. Sure, some students and faculty referred to the decision an "overreaction" and favored the idea of merely trying to isolate the campus from the outside world, but that's nowhere near the brazen stupidity going on in town. The movie theater's parking lot is as full as it was for the last *Avengers* film, every restaurant appears busy, and people are out shopping. Frivolous shopping by blasé buyers vocally proclaiming their ignorance and panicked types "stocking up" line up alike. I dare not venture into Wal-Mart or any of the grocery stores after work, but I'm told that there are rows upon rows of aisles that are entirely bare. (The toilet paper and hand sanitizer were long gone, days before, of course.)
 
-Some observed opinions on the pandemic which I've observed:
-
-* "This is ridiculous. It's not like it's an epidemic!" [Um, about that...]
-
-* Fill out more later
-
 I'm, quite frankly, disturbed by what's going on. You have belligerent ignorance on one end and undirected panic on the other, with little being done to mitigate the impending threat as people create a scenario enabling faster propagation. Meanwhile, medical professionals prepare to do battle, knowing full well that they are ill-equipped. Supply interruptions have caused shortages of everything from masks to commonly used drugs like anticoagulants needed for surgeries. There aren't enough hospital beds or ventilators in the world for expected numbers of patients, with the WHO's estimated 20% of infected requiring hospitalization to survive.
 
 People bat around different numbers for mortality rates, but here's the thing: the number of deaths is a function of the hospitalization rate and hospital capacity. If 10-20% (do you like 1-in-10 odds?) of people who come in contact with a virus known to spread very easily can only survive it with medical attention, that obviously means it's fatal to not receive that care. Maybe there aren't enough resources to go around, maybe people avoid seeking medical care due to the costs or lack of insurance. Maybe they have another medical emergency and hospitals are stretched too thin due to the virus. When you have doctors around the world telling you shit's about to hit the fan...maybe don't pretend you know more than people who devoted years of their lives to studying their field?
