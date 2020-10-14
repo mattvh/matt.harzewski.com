@@ -8,7 +8,7 @@ tags:
 {% img right /images/posts/unitylogo.png %}
 I've been fascinated by the idea of developing games since I first started teaching myself to program around the age of ten. Of course, way back in the early 2000s, we didn't have the wealth of freely-available game engines with fancy rapid prototyping. Big names like Unreal or idtech3 cost a lot of money, and you were almost certainly going to have to be familiar with C++ to hack even simple things together. That's a tall order for a kid, especially when you're more familiar with the likes of PHP and JavaScript (yuck). So I didn't really get into game development back then (though I have played around a little with Unity in recent years), but I did *read* about the topic quite a bit.
 
-One thing stuck with me, as I read forums or the limited books I could get my hands on through Interlibrary Loans: everyone always laid on thick that MMORPGs, which were the hottest genre at the time, were "too complicated" for the hobbyist. Obviously that wasn't something you wanted to hear when you were spending too many hours playing RuneScape and frequently read about Everquest and World of Warcraft.
+One thing stuck with me, as I read forums or the limited books I could get my hands on through interlibrary loans: everyone always laid on thick that MMORPGs, which were the hottest genre at the time, were "too complicated" for the hobbyist. Obviously that wasn't something you wanted to hear when you were spending too many hours playing RuneScape and frequently read about EverQuest and World of Warcraft.
 
 They did make a reasonable point. An MMORPG *is* a massive undertaking for a beginner, since it involves a reasonable knowledge of many deep topics, such as networking, concurrency and databases. The thing is...that doesn't preclude the possibility of a sufficiently knowledgeable hobbyist pulling it off. In fact, Ultima Online was initially produced by a team of 4-5 people and the original incarnation of [RuneScape was the work of two brothers.](https://en.wikipedia.org/wiki/RuneScape#History_and_development)
 
@@ -76,11 +76,32 @@ Upon successful authentication, the server dispatches a packet with a list of th
 When a player is selected, a packet is sent to the server to join the game, and the server responds by sending a player spawn packet. This commands the client to load a Scene by name, and includes the coordinates and rotation.
 
 ### Zone Architecture
+Zones are a server-side concept that section off parts of the world. Each zone has a Unity Scene associated with it, a list of players in the zone, a list of entities (mobs and NPCs, eventually), and other data. Each zone is defined by a JSON file that contains the relevant information.
+
+Every time the server loop ticks (a fixed number of times per second), it calls each zone's Update() method, which is responsible for updating all or some of the entities contained within. So it might run mob behaviors near players or do nothing at all if the zone is empty. Every *n* ticks, player data (e.g. location) will also be persisted to the database.
+
+I developed an editor tool that will automatically generate zone definition files based on input configuration. It's just the absolute basics right now, but eventually it will be expanded as new features are implemented. For example, exits to other zones may be defined with boundaries in-editor, and the zone definition tool will serialize those as well. NPC spawn points will also be marked in a similar fashion.
+
 {% img /images/posts/mmorpg-zonetool.png %}
+
+The zone tool also has a utility that extracts the vertices and triangles from Unity's navmesh and writes it out to an OBJ file that can also be copied to the server. This is how mobs and NPCs will be able to pathfind, since that has to be done server-side. It could also be used to check if ranged abilities are obstructed by walls.
+
+The base Zone class is also meant to be inheritable, to support special Zones with procedurally-generated content. This factors greatly into the premise I've been kicking around for the game.
 
 ### Player Spawning and Controller
 So far, the spawn packet works as expected, using information stored in the database. However, I have not yet fully implemented the logic to handle movement requests from the connected clients. The player can walk around using a basic third person controller, but nothing is sent to the server. I have it planned out on paper, but haven't finished programming it.
 
+The basic idea for movement is for the client to send updates, multiple times per second, of where the client is moving to. The Euclidean distance between the two points can then be checked to ensure that the player is not moving too far between update intervals. If the delta is greater than the cutoff, the location is reset and the client will "rubberband" back. This (relatively simple) method is commonly used for games where player movement isn't a gamebreaking issue, as far as cheating goes. (Minecraft and World of Warcraft operate similarly.)
+
+The method that is increasingly common in fast-faced games, like First Person Shooters, is for the client to send a unit vector of the player's input to the server, which then calculates the movement update (multiplying the vector by the time difference and legal movement speed) and then commands the client to move the player. Since this is very latency sensitive, they interpolate and predict what the server would do so it looks less stuttery when ping time is reasonably low. (But a little lag still throws it all off.) This is a lot more complicated, and definitely worth it for some games, but overkill for something like this.
+
+With either method, the server is the source of truth and has the final say.
+
 {% img /images/posts/mmorpg-player-test.png %}
 
 For testing purposes, I'm using a model from Adobe Mixamo with some of the included animations. I'm also using a basic movement controller that allows for jumping, and the Cinemachine package is handling camera movement. This will all replaced/tweaked over time, but I needed something to start with while working on the more interesting parts.
+
+### Conclusion
+Everything is very iterative, and the project definitely does have a huge scope. So it should keep me busy and scratch the recurring itch to make Minecraft server plugins. Why hack together mods for someone else's game when you can make your own? I have a notebook slowly filling with plans for facets of the system, sketches of zones and a rough premise. It'll be fun to slowly realize that vision.
+
+I will probably post sporadic updates when I do something new and interesting.
