@@ -5,6 +5,7 @@ date: 2020-10-13 17:44
 tags:
 - mmorpgdevlog
 ---
+{% img right /images/posts/unitylogo.png %}
 I've been fascinated by the idea of developing games since I first started teaching myself to program around the age of ten. Of course, way back in the early 2000s, we didn't have the wealth of freely-available game engines with fancy rapid prototyping. Big names like Unreal or idtech3 cost a lot of money, and you were almost certainly going to have to be familiar with C++ to hack even simple things together. That's a tall order for a kid, especially when you're more familiar with the likes of PHP and JavaScript (yuck). So I didn't really get into game development back then (though I have played around a little with Unity in recent years), but I did *read* about the topic quite a bit.
 
 One thing stuck with me, as I read forums or the limited books I could get my hands on through Interlibrary Loans: everyone always laid on thick that MMORPGs, which were the hottest genre at the time, were "too complicated" for the hobbyist. Obviously that wasn't something you wanted to hear when you were spending too many hours playing RuneScape and frequently read about Everquest and World of Warcraft.
@@ -66,6 +67,11 @@ The running theme seems to be that the server does a lot of the same things as a
 ### Login Menu and Character Selection
 Now it's time to do some work on the client.
 
+{% img /images/posts/mmorpg-login.png %}
+{% img /images/posts/mmorpg-charselect.png %}
+
 ### Zone Architecture
+{% img /images/posts/mmorpg-zonetool.png %}
 
 ### Player Spawning and Controller
+{% img /images/posts/mmorpg-player-test.png %}
