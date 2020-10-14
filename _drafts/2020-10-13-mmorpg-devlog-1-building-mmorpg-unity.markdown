@@ -65,13 +65,22 @@ I briefly looked at the Dapper micro-ORM, but settled on Microsoft's own Entity 
 The running theme seems to be that the server does a lot of the same things as a large Web application. You model data, shuffle it to and from a database, and talk with clients over an API. The only difference is you're using an open UDP socket with purpose-built packets instead of something like REST over HTTP.
 
 ### Login Menu and Character Selection
-Now it's time to do some work on the client.
+Now it's time to do some work on the client. When you start the game, the first Scene loaded by Unity is the Login Menu. Attempting to join the game fires off the packet exchange detailed above in the Authentication section.
 
 {% img /images/posts/mmorpg-login.png %}
+
+Upon successful authentication, the server dispatches a packet with a list of the user's characters. When it's received by the client, the menu changes to show a list of characters to choose. Currently there is no way to add a character other than editing the database, since that will probably involve having more of an idea how character customization might work...
+
 {% img /images/posts/mmorpg-charselect.png %}
+
+When a player is selected, a packet is sent to the server to join the game, and the server responds by sending a player spawn packet. This commands the client to load a Scene by name, and includes the coordinates and rotation.
 
 ### Zone Architecture
 {% img /images/posts/mmorpg-zonetool.png %}
 
 ### Player Spawning and Controller
+So far, the spawn packet works as expected, using information stored in the database. However, I have not yet fully implemented the logic to handle movement requests from the connected clients. The player can walk around using a basic third person controller, but nothing is sent to the server. I have it planned out on paper, but haven't finished programming it.
+
 {% img /images/posts/mmorpg-player-test.png %}
+
+For testing purposes, I'm using a model from Adobe Mixamo with some of the included animations. I'm also using a basic movement controller that allows for jumping, and the Cinemachine package is handling camera movement. This will all replaced/tweaked over time, but I needed something to start with while working on the more interesting parts.
