@@ -105,3 +105,5 @@ For testing purposes, I'm using a model from Adobe Mixamo with some of the inclu
 Everything is very iterative, and the project definitely does have a huge scope. It should keep me busy and scratch the recurring itch to make Minecraft server plugins. Why hack together mods for someone else's game when you can make your own? I have a notebook slowly filling with plans for facets of the system, sketches of zones and a rough premise. It'll be fun to slowly realize that vision.
 
 I will probably post sporadic updates when I do something new and interesting.
+
+[MMORPG Devlog 2: Networked Player Movement](/2021/02/03/mmorpg-devlog-2-networked-player-movement/)
