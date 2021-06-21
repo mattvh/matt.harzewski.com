@@ -107,3 +107,5 @@ Everything is very iterative, and the project definitely does have a huge scope.
 I will probably post sporadic updates when I do something new and interesting.
 
 [MMORPG Devlog 2: Networked Player Movement](/2021/02/03/mmorpg-devlog-2-networked-player-movement/)
+
+[MMORPG Devlog 3: Chat and Commands](/2021/06/20/mmorpg-devlog-3-chat-and-commands/)
