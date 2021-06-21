@@ -8,7 +8,7 @@ plugins: [jekyll-paginate]
 
 paginate: 10
 highlighter: true
-markdown: rdiscount
+#markdown: rdiscount
 rdiscount:
     extensions: ['smart']
 
