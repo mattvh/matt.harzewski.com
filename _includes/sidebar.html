@@ -1,11 +1,16 @@
-                <div id="sidebarad">
-                    <a class="adimg" href="https://www.digitalocean.com/?refcode=b6711983671a">
-                      <img src="/images/ads/digitalocean.png" alt="Digital Ocean" title="Digital Ocean" width="120" height="90" />
+                <div id="sidebaraf">
+                    <a class="afimg" href="https://www.digitalocean.com/?refcode=b6711983671a">
+                      <img src="/images/afs/digitalocean.png" alt="Digital Ocean" title="Digital Ocean" width="120" height="90" />
                     </a>
                     <p>Simple Cloud Hosting by <a href="https://www.digitalocean.com/?refcode=b6711983671a">DigitalOcean</a></p>
                 </div>
                 
-                <div id="sidebartwitter">
-                    <div id="sbtweets"></div>
-                    <div class="followbutton"><a href="https://twitter.com/mattharzewski" class="twitter-follow-button" data-show-count="false" data-width="135px">Follow @mattharzewski</a></div>
+                <div class="sidebarseries">
+                    <h3>MMORPG Devlog</h3>
+                    <p>Building an MMORPG in Unity for fun.</p>
+                    <ul>
+                        {% for post in site.tags['mmorpgdevlog'] limit:2 %}
+                            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    </ul>
                 </div>

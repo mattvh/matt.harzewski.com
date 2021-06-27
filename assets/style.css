@@ -301,68 +301,18 @@ input.searchinput {
 
 
 /*** Sidebar Content ***/
-#sidebartwitter {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	/*border-bottom: 1px solid #e5e5e5;*/
-}
-
-#sidebartwitter .followbutton {
-	display: block;
-	width: 135px;
-	margin: 15px auto 0 auto;
-}
-
-#sbtweets {
-	margin: 0 auto;
-	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif;
-	font-size: 0.75em;
-	line-height: 1.4;
-	color: #666666;
-}
-
-#sbtweets ul {
-	margin: 0;
-	padding: 0;
-}
-
-#sbtweets li {
-	list-style: none;
-	padding-bottom: 3px;
-}
-
-#sbtweets .user a, #sbtweets .user a:hover {
-	text-decoration: none;
-	color: #555555;
-    font-weight: bold;
-}
-
-#sbtweets .user img {
-	width: 24px;
-	height: 24px;
-}
-
-#sbtweets .user span:first-of-type {
-	display: none;
-}
-
-#sbtweets .user span {
-	position: relative;
-	top: -7px;
-}
-
-#sidebarad {
+#sidebaraf {
 	padding-top: 10px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
-#sidebarad a.adimg {
+#sidebaraf a.afimg {
 	display: block;
     width: 100%;
 }
 
-#sidebarad img {
+#sidebaraf img {
 	display: block;
     margin: 0 auto 6px auto;
     /*border: 1px solid #e0e0e0;*/
@@ -372,19 +322,51 @@ input.searchinput {
     padding: 4px;
 }
 
-#sidebarad img:hover {
+#sidebaraf img:hover {
 	opacity: 0.9;
 	-moz-opacity: 0.9;
 	filter:alpha(opacity=9);
 }
 
-#sidebarad p {
+#sidebaraf p {
 	font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif;
 	font-size: 0.65em;
 	line-height: 1.4;
 	width: 120px;
 	margin: 0 auto;
 	color: #666666;
+}
+
+.sidebarseries {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.sidebarseries:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sidebarseries h3 {
+    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.sidebarseries p {
+    font-family: "lucida grande",lucida,tahoma,helvetica,arial,sans-serif;
+    font-size: 0.65em;
+    line-height: 1.4;
+    color: #666666;
+}
+
+.sidebarseries ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebarseries li {
+    list-style: none;
+    font-size: 0.85em;
 }
 
 
