@@ -2,9 +2,10 @@
 layout: post
 title: "MMORPG Devlog 3: Chat and Commands"
 date: 2021-06-20 19:07
+tags: mmorpgdevlog
 ---
 
-This post is part of my [MMORPG Devlog series.](/2020/10/13/mmorpg-devlog-1-building-mmorpg-unity/)
+This post is part of my [MMORPG Devlog series.]({{site.baseurl}}/tags/mmorpgdevlog/)
 
 One of the most important parts of an MMORPG is chat. Being able to interact with other players is a a staple feature of the genre, and it's essential to have any sort of community aspect. As far back as [MUDs](https://en.wikipedia.org/wiki/MUD), the ancestor of the modern MMORPG, just hanging out and talking to people has been a core part of the online role playing game experience. A chat system also serves as a means of command input, which is useful for functionality that doesn't need its own GUI...or moderation tools.
 

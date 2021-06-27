@@ -5,7 +5,7 @@ date: 2021-02-03 10:48
 tags:
 - mmorpgdevlog
 ---
-*This post is part of my [MMORPG Devlog](/2020/10/13/mmorpg-devlog-1-building-mmorpg-unity/) series.*
+*This post is part of my [MMORPG Devlog]({{site.baseurl}}/tags/mmorpgdevlog/) series.*
 
 {% img right /images/posts/unitylogo.png %}
 

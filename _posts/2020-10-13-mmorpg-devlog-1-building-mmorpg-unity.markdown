@@ -6,6 +6,8 @@ tags:
 - mmorpgdevlog
 ---
 {% img right /images/posts/unitylogo.png %}
+*This post is part of my [MMORPG Devlog]({{site.baseurl}}/tags/mmorpgdevlog/) series.*
+
 I've been fascinated by the idea of developing games since I first started teaching myself to program around the age of ten. Of course, way back in the early 2000s, we didn't have the wealth of freely-available game engines with fancy rapid prototyping. Big names like Unreal or idtech3 cost a lot of money, and you were almost certainly going to have to be familiar with C++ to hack even simple things together. That's a tall order for a kid, especially when you're more familiar with the likes of PHP and JavaScript (yuck). So I didn't really get into game development back then (though I have played around a little with Unity in recent years), but I did *read* about the topic quite a bit.
 
 One thing stuck with me, as I read forums or the limited books that I could get my hands on through interlibrary loans: everyone always laid on thick that MMORPGs, which were the hottest genre at the time, were "too complicated" for the hobbyist. Obviously, that wasn't something you wanted to hear when you were spending too many hours playing RuneScape and frequently read about EverQuest and World of Warcraft.
@@ -105,7 +107,3 @@ For testing purposes, I'm using a model from Adobe Mixamo with some of the inclu
 Everything is very iterative, and the project definitely does have a huge scope. It should keep me busy and scratch the recurring itch to make Minecraft server plugins. Why hack together mods for someone else's game when you can make your own? I have a notebook slowly filling with plans for facets of the system, sketches of zones and a rough premise. It'll be fun to slowly realize that vision.
 
 I will probably post sporadic updates when I do something new and interesting.
-
-[MMORPG Devlog 2: Networked Player Movement](/2021/02/03/mmorpg-devlog-2-networked-player-movement/)
-
-[MMORPG Devlog 3: Chat and Commands](/2021/06/20/mmorpg-devlog-3-chat-and-commands/)
