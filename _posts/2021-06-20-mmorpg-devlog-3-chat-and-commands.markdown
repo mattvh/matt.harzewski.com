@@ -9,7 +9,7 @@ This post is part of my [MMORPG Devlog series.]({{site.baseurl}}/tags/mmorpgdevl
 
 One of the most important parts of an MMORPG is chat. Being able to interact with other players is a a staple feature of the genre, and it's essential to have any sort of community aspect. As far back as [MUDs](https://en.wikipedia.org/wiki/MUD), the ancestor of the modern MMORPG, just hanging out and talking to people has been a core part of the online role playing game experience. A chat system also serves as a means of command input, which is useful for functionality that doesn't need its own GUI...or moderation tools.
 
-{% img right /images/posts/mmorpg-chatting.png %}
+{% img center /images/posts/mmorpg-chatting.png %}
 
 ### Network Packets
 I went back and forth quite a bit with my initial planning for the networking side of the chat system. I initially wanted to combine the system backing the garden variety chat pane with the structure that would eventually be required for things like NPC dialogue, which would require a more flexible schema to accommodate various metadata values in addition to the body text. In the end, I realized that was really best left as a separate concern and decided that command and response packets should be kept simple for now.
@@ -23,7 +23,7 @@ The chat pane is made of two basic Unity UI elements: a text input field and a s
 
 The scroll view is a bit more finicky, and relies on some included layout components to create the desired behavior. The scroll view effectively operates by dynamically repositioning a child view and clipping it at the top and bottom bounds of the parent view.
 
-{% img right /images/posts/mmorpg-chatui.png %}
+{% img center /images/posts/mmorpg-chatui.png %}
 
 If you look up basic examples of how to use Unity scroll views, they usually focus on using a single text label as the content being scrolled. This doesn’t work well for a chat UI, despite its apparent simplicity, for two reasons: first, we need to be able to remove older messages instead of adding onto the label forever. More importantly, Unity labels do not automatically change their dimensions to fit their content when you append text, at least in a way that plays nicely with the scroll view. Plus, we’d ideally like to have some control over the margins between chat messages.
 
@@ -31,7 +31,7 @@ The most elegant solution is to take the Content object, a Rect, which is basica
 
 With that in place, all that's needed is a simple prefab of a text label. Whenever a chat packet comes in, a listener in the chat pane's MonoBehaviour instantiates the prefab, sets its parents to the Content view, and then sets the text to the string value from the network packet. The text's paragraph style is set to wrap horizontally and overflow vertically, so the label will expand.
 
-{% img right /images/posts/mmorpg-chatui-layout.png %}
+{% img center /images/posts/mmorpg-chatui-layout.png %}
 
 When instantiating the prefabs, they're also pushed onto a queue, with the oldest dequeued when there are more than a configurable number in the queue. This keeps the scrollback from growing endlessly and becoming unmanagable.
 
@@ -91,6 +91,6 @@ public class SayCommand : Command {
 
 There is also a corresponding `/me` command for roleplaying messages or the fine IRC tradition of trout-slapping.
 
-{% img right /images/posts/mmorpg-chatdms.png %}
+{% img center /images/posts/mmorpg-chatdms.png %}
 
 Direct messages are mostly implemented as well. You can target a message to a player with a command in the form of `/msg <firstname> <lastname> <msg>`. Whenever you send a message to another player, or receive one, a property is set that enables the `/r <msg>` command to automatically reply to the correct player, keeping the conversation going without having to deal with the cumbersome name each time.
