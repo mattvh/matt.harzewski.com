@@ -7,9 +7,9 @@
                 
                 <div class="sidebarseries">
                     <h3>MMORPG Devlog</h3>
-                    <p>Building an MMORPG in Unity for fun.</p>
+                    <p>Building an MMORPG in Unity for fun. <a href="{{site.baseurl}}/tags/mmorpgdevlog/">All Posts&rarr;</a></p>
                     <ul>
-                        {% for post in site.tags['mmorpgdevlog'] limit:2 %}
+                        {% for post in site.tags['mmorpgdevlog'] limit:3 %}
                             <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                         {% endfor %}
                     </ul>
