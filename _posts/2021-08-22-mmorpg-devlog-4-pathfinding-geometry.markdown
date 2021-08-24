@@ -251,7 +251,9 @@ After about four weeks of working on pathfinding, I think it's finally in a stat
 
 Of course, there is still some more to be done on server-side geometry issues. I *did* think to test the pathfinding with a scene that features a one square kilometer terrain object, with some quick mountains and such painted on. It worked fine, after a little bit of debugging to smooth out some minor glitches with the raycasting and a bug or two with the player spawning in a new zone, but there are some definite performance issues to address.
 
-A larger zone with a ground that isn't simply a plane ends up having many more triangles (the navmesh Unity generated has around 20,000) and this is noticeably slow for pathfinding...as well as taking several seconds to generate the neighbor properties on the triangle objects. Again, that latter one isn't the end of the world (but it would be nice to improve upon). However, it's important that the actual pathfinding process be reasonably fast, so further investigation on that front is necessary.
+A larger zone with a ground that isn't simply a plane ends up having many more triangles (the navmesh Unity generated has several thousand) and this is noticeably slow for pathfinding...as well as taking several seconds to generate the neighbor properties on the triangle objects. Again, that latter one isn't the end of the world (but it would be nice to improve upon). However, it's important that the actual pathfinding process be reasonably fast, so further investigation on that front is necessary.
+
+Edit: After some investigation, it turns out that the apparent sluggishness is a result of the debugging tool drawing too many gizmo lines on the client. The pathfinding is actually lightning fast.
 
 {% img center /images/posts/mmorpg-path-terrainlines.png %}
 
